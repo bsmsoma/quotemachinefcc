@@ -1,42 +1,157 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    height: 100%;
+}
+.App {
+    width: 100%;
+    margin-top: 10%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: mintcream;
+    width: 50%;
+    max-width: 500px;
+    height: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    z-index: 1;
+    padding: 10px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 50%;
+    max-width: 500px;
+    min-height: 200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: mintcream;
+}
+main .author {
+    margin-left: auto;
+}
+/* Quote Button */
+.quote {
+    display: table-row;
+    margin: 0;
+    padding: 0.5rem;
+    text-align: justify;
+    font-size: large;
 }
 
-.card {
-  padding: 2em;
+.quote::before {
+    content: '" ';
+    font-weight: 900;
 }
 
-.read-the-docs {
-  color: #888;
+.quote::after {
+    content: ' "';
+    font-weight: 900;
+}
+
+.author {
+    display: table-row;
+    margin: 1rem;
+    text-align: left;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.author::before {
+    content: " - ";
+    font-weight: 900;
+}
+.linksandbuttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+}
+button {
+    margin-right: 1rem;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(12, 85, 201);
+    color: mintcream;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+
+a {
+    margin-left: 1rem;
+    color: inherit;
+}
+@media (max-width: 600px) {
+    .navbar, main {
+        width: 90%;
+        min-width: 300px;
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .App {
+        margin: 5rem auto;
+    }
+
+    button {
+        padding: 6px;
+        font-size: small;
+    }
+
+    .quote {
+        font-size: medium;
+    }
+
+    .author {
+        font-size: medium;
+    }
+}
+
+/* Para celulares com telas maiores (largura entre 600px e 768px) */
+@media (max-width: 600px) {
+
+    .navbar, main {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .App {
+        margin: 8rem auto;
+    }
+
+    button {
+        padding: 1rem;
+        font-size: medium;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+    }
+
+    .author {
+        font-size: 1.5rem;
+    }
+    .twitter {
+        padding: 1rem;
+    }
 }
